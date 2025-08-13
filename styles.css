@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: DMSans;
-    src: url(https://github.com/vislow/vislow.github.io/blob/main/.fonts/DM_Sans/DMSans.ttf);
+    src:url('/fonts/DMSans.ttf') format('truetype');
 }
 
 ::selection {
