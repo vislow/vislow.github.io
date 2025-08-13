@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: DMSans;
-    src: url(.fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
+    src: url(/.fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf);
 }
 
 ::selection {
