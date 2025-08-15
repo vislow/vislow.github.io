@@ -5,6 +5,7 @@
     --bg-color-1: #14131b;
     --bg-color-2: #22212c;
     --border-color-1: #272630;
+    --border-color-2: #353440;
     --shadow-color-1: rgba(15, 15, 20, 0.285);
     --accent-color-1: #d87093;
     --accent-color-2: #d6a560;
@@ -28,24 +29,19 @@ h5,
 h6 {
     font-family: DMSans;
     color: var(--text-color-1);
-
+    margin: 10px 0px 10px 0px;
 }
 
+a,
 p {
     font-size: 14px;
     font-weight: 500;
 }
 
 a {
-    font-size: 14px;
-    font-weight: 500;
     color: var(--text-color-1);
     text-decoration: none;
     font-family: DMSans;
-}
-
-small {
-    color: var(--text-color-2);
 }
 
 a:hover {
@@ -53,9 +49,8 @@ a:hover {
     cursor: default;
 }
 
-h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+small {
+    color: var(--text-color-2);
 }
 
 body {
@@ -64,8 +59,38 @@ body {
 }
 
 hr {
-    color: transparent;
-    margin: 7px 0px 3px 0px;
+    color: var(--border-color-2);
+    margin: 5px 0px 3px 0px;
+    padding: 0px;
+}
+
+.button1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.button1:hover {
+    color: var(--accent-color-1);
+    cursor: default;
+}
+
+.container {
+    background-color: var(--bg-color-2);
+    border-radius: 5px;
+    border-color: var(--border-color-1);
+    border-width: 1px;
+    min-width: 20vw;
+    height: fit-content;
+    padding: 20px;
+    box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
+}
+
+.container h1,h2,h3,h4,h5,h6 {
+    margin: 0px 0px 0px 0px;
+}
+
+.containerHeader {
+    margin-bottom: 10px;
 }
 
 .stars {
@@ -120,12 +145,18 @@ hr {
     box-shadow: 0px 0px 6px 3px var(--shadow-color-1);
 }
 
-#topPageMargin {
-    height: 71px;
+#navButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#title a {
-    color: var(--accent-color-2);
+#navButtonContainer .button1 {
+    margin-left: 15px;
+}
+
+#topPageMargin {
+    height: 70px;
 }
 
 #title {
@@ -138,53 +169,9 @@ hr {
     cursor: default;
 }
 
-#navButtonContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navButton {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 0px 8px 0px 8px;
-    padding-right: 0px;
-    margin-left: 5px;
-}
-
-.navButton:hover {
-    color: var(--accent-color-1);
-    cursor: default;
-}
-
-#highlightImage {
-    width: 100%;
-    height: 300px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 #mainContentContainer {
     display: flex;
 }
-
-.readingList {
-    background-color: var(--bg-color-2);
-    border-radius: 5px;
-    border-color: var(--border-color-1);
-    border-width: 1px;
-    min-width: 20vw;
-    height: fit-content;
-    padding: 15px 15px 20px 15px;
-    box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
-    margin: 10px 10px 10px 0px;
-}
-
-.readingList h4 {
-    margin: 0px;
-}
-
 
 #blogTagList {
     flex: auto;
@@ -214,17 +201,8 @@ hr {
     width: 100%;
 }
 
-.blogPost {
-    background-color: var(--bg-color-2);
-    border-color: var(--border-color-1);
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    margin: 10px 0px 10px 0px;
-    padding: 0px 15px 1px 15px;
-    box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
-    overflow: hidden;
-    max-height: 300px;
+#blogList .container {
+    margin-bottom: 10px;
 }
 
 .blogTitle {
@@ -233,7 +211,6 @@ hr {
 }
 
 .blogDescription {
-    font-size: 14px;
     height: 55px;
     overflow: hidden;
     text-overflow: clip ellipsis;
@@ -250,39 +227,13 @@ hr {
     justify-content: space-between;
     padding-top: 3px;
     height: 35px;
-}
-
-.blogButton {
-    font-family: DMSans;
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 10px;
-    width: auto;
-    margin: 0px;
-    color: var(--text-color-1);
-}
-
-.blogButton:hover {
-    color: var(--accent-color-1);
-    cursor: default;
+    align-items: center;
 }
 
 .blogPostDate {
-    font-size: 14px;
     margin-top: 10px;
     font-weight: 400;
     text-align: right;
     width: 300px;
     margin: 0px;
-}
-
-.blogBody {
-    overflow: wrap;
-    text-overflow: clip;
-    padding: 0px;
-    margin: 0px;
-}
-
-.blogBody p {
-    margin: 0px !important;
 }
