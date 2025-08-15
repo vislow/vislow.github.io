@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Convert to URL-friendly format (e.g. "My Blog Title" → "my-blog-title")
             const slug = blogTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]/g, '');
 
-            blogButtons[i].setAttribute('href', `/blogs/${slug}.html`);
+            blogButtons[i].setAttribute('href', `/blog-posts-html/${slug}.html`);
 
-            console.log(`Button ${i} href set to: /blogs/${slug}.html`);
+            console.log(`Button ${i} href set to: /blog-posts-html/${slug}.html`);
         } else {
             console.warn(`No matching title found for button ${i}`);
         }

@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: DMSans;
-    src:url('/fonts/DMSans.ttf') format('truetype');
+    src: url('/fonts/DMSans.ttf') format('truetype');
 }
 
 ::selection {
@@ -33,11 +33,39 @@ h6 {
 
 p {
     font-size: 14px;
+    font-weight: 500;
+}
+
+a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-1);
+    text-decoration: none;
+    font-family: DMSans;
+}
+
+small {
+    color: var(--text-color-2);
+}
+
+a:hover {
+    color: var(--accent-color-1);
+    cursor: default;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 body {
     margin-top: 0px;
     background: var(--bg-color-1)
+}
+
+hr {
+    color: transparent;
+    margin: 7px 0px 3px 0px;
 }
 
 .stars {
@@ -148,26 +176,9 @@ body {
     border-width: 1px;
     min-width: 20vw;
     height: fit-content;
-    min-height: 200px;
     padding: 5px 15px 20px 15px;
     box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
     margin: 10px 10px 10px 0px;
-}
-
-a {
-    font-size: 14px;
-    color: var(--text-color-1);
-    text-decoration: none;
-    font-family: DMSans;
-}
-
-.resourceEntry small {
-    color: var(--text-color-2);
-}
-
-.resourceEntry a:hover {
-    color: var(--accent-color-1);
-    cursor: default;
 }
 
 #blogTagList {
@@ -208,6 +219,7 @@ a {
     padding: 0px 15px 1px 15px;
     box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
     overflow: hidden;
+    max-height: 300px;
 }
 
 .blogTitle {
