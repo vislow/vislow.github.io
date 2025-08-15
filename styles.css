@@ -176,10 +176,15 @@ hr {
     border-width: 1px;
     min-width: 20vw;
     height: fit-content;
-    padding: 5px 15px 20px 15px;
+    padding: 15px 15px 20px 15px;
     box-shadow: 5px 5px 3px 3px var(--shadow-color-1);
     margin: 10px 10px 10px 0px;
 }
+
+.readingList h4 {
+    margin: 0px;
+}
+
 
 #blogTagList {
     flex: auto;

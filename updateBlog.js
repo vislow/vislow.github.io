@@ -57,7 +57,7 @@ function GenerateBlogContents() {
 
         blogPostHTML += blogPostTemplate
             .replace('<!-- BLOG_TITLE -->', title)
-            .replace('<!-- BLOG_PREVIEW -->', blogPreview + '<p style="">...</p>')
+            .replace('<!-- BLOG_PREVIEW -->', blogPreview)
             .replace('<!-- BLOG_DATE -->', dateTime)
             .replace('<!-- BLOG_TAGS -->', tags);
 
