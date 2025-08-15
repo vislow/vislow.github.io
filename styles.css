@@ -173,30 +173,6 @@ hr {
     display: flex;
 }
 
-#blogTagList {
-    flex: auto;
-    justify-content: left;
-    display: flex;
-}
-
-.blogTagButton {
-    background-color: var(--bg-color-1);
-    border: var(--border-color-1);
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 30px;
-    font-family: DMSans;
-    color: var(--text-color-1);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 6px 12px 7px 12px;
-}
-
-.blogTagButton:hover {
-    background-color: var(--accent-color-1);
-    cursor: default;
-}
-
 #blogContainer {
     width: 100%;
 }
@@ -225,7 +201,6 @@ hr {
 #blogBottomRow {
     display: flex;
     justify-content: space-between;
-    padding-top: 3px;
     height: 35px;
     align-items: center;
 }
