@@ -1,0 +1,6 @@
+Completed: yes
+Creation Date: August 19, 2025
+Creation Time: 06:40 JST
+Tags: Self Improvement, Technology
+
+I'm lost. I've recently thought about giving up on computer science. It feels like such a losing battle to do anything at this point. I know there are systems out there still using cobalt, php, and windows 96 but with new frameworks and languages every day it feels so overwhelming and especially with AI being pushed so heavily every career path related to computer science has it being pushed somewhere in the line and that kinda sucks. I want programming to be a craft I master. Maybe this is selfishness, I can't tell. Perhaps for some technologies that work to benefit the greater good AI could be used to speed up the process but for most projects I just want to enjoy the process of making the thing and solving the problems. Maybe this is a "ai doomer" mindset that I've developed. I don't know. I don't know whats going on in the world because I find it so hard to interact with in its current state. I've always wanted to be a scientist of some kind but I'd need to go to school for that and frankly its embarrassing how I simply can't function in a school setting. I'm hungry and need to eat breakfast. How do people do it? I'm not sure.

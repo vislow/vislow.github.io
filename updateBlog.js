@@ -34,16 +34,16 @@ function GenerateBlogContents() {
     // parse date
 
     let indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
-    
+
     indexHTML = indexHTML.replace(
         /<div id="blogList">[\s\S]*?<!-- BLOG_POSTS -->/,
         `<div id="blogList">\n\n<!-- BLOG_POSTS -->`
     );
-    
+
     fs.writeFileSync(path.join(__dirname, 'index.html'), indexHTML);
-    
+
     if (htmlFiles.length == 0) return;
-    
+
     htmlFiles = SortArrayByCreationDate(htmlFiles);
     htmlFiles.forEach(file => {
         const linkSlug = file.fileName.toLowerCase().replace('.md', '.html').replace(/\s+/g, '-');
@@ -130,8 +130,10 @@ function parseMarkdownToHtml(markdown, filename = '') {
         if (line.startsWith('Complete: ')) {
             let result = line.split(' ').pop();
 
-            if (result == 'no') {
-                return '', '';
+            if (result === 'no') {
+                break;
+            } else {
+                continue;
             }
         }
         else if (line.startsWith('Creation Date: ')) {
