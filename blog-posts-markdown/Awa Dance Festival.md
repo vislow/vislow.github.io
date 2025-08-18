@@ -1,3 +1,4 @@
+Complete: no
 Creation Date: Aug 14th, 2025
 Creation Time: 23:45 JST
 Tags: Travel

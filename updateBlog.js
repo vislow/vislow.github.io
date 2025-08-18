@@ -19,21 +19,32 @@ function GenerateBlogContents() {
         const markdownFile = fs.readFileSync(path.join(markdownDirectory, fileName), 'utf-8');
         const { html, metadata } = parseMarkdownToHtml(markdownFile, fileName);
 
+        if (html != '' && metadata != '') {
+            fileData = {
+                fileName: fileName,
+                html: html,
+                metadata: metadata
+            }
 
-        fileData = {
-            fileName: fileName,
-            html: html,
-            metadata: metadata
+            htmlFiles.push(fileData);
         }
-
-        htmlFiles.push(fileData);
     })
 
     // sort htmlFiles by metadata date
     // parse date
 
+    let indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
+    
+    indexHTML = indexHTML.replace(
+        /<div id="blogList">[\s\S]*?<!-- BLOG_POSTS -->/,
+        `<div id="blogList">\n\n<!-- BLOG_POSTS -->`
+    );
+    
+    fs.writeFileSync(path.join(__dirname, 'index.html'), indexHTML);
+    
+    if (htmlFiles.length == 0) return;
+    
     htmlFiles = SortArrayByCreationDate(htmlFiles);
-
     htmlFiles.forEach(file => {
         const linkSlug = file.fileName.toLowerCase().replace('.md', '.html').replace(/\s+/g, '-');
         const outputPath = path.join(__dirname, 'blog-posts-html', linkSlug);
@@ -61,7 +72,6 @@ function GenerateBlogContents() {
             .replace('<!-- BLOG_DATE -->', dateTime)
             .replace('<!-- BLOG_TAGS -->', tags);
 
-        let indexHTML = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf-8');
 
         indexHTML = indexHTML.replace(
             /<div id="blogList">[\s\S]*?<!-- BLOG_POSTS -->/,
@@ -117,9 +127,15 @@ function parseMarkdownToHtml(markdown, filename = '') {
     for (const line of lines) {
         let htmlTag = '';
 
-        if (line.startsWith('Creation Date: ')) {
-            dateString = line.replace('Creation Date: ', '');
+        if (line.startsWith('Complete: ')) {
+            let result = line.split(' ').pop();
 
+            if (result == 'no') {
+                return '', '';
+            }
+        }
+        else if (line.startsWith('Creation Date: ')) {
+            dateString = line.replace('Creation Date: ', '');
 
             const parsedDate = dateString.replace('th,', '').replace('nd', '').split(' ');
 
