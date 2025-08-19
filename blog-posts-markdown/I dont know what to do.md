@@ -1,4 +1,4 @@
-Completed: yes
+Complete: yes
 Creation Date: Aug 19, 2025
 Creation Time: 06:40 JST
 Tags: Self Improvement, Technology
